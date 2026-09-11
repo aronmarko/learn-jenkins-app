@@ -4,7 +4,6 @@ pipeline {
     environment {
         NETLIFY_SITE_ID = '970eb57b-4ac8-4a10-84a6-c172f08de984'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
-        CI_ENVIRONMENT_URL = 'https://deft-crostata-3e8a54.netlify.app'
     }
 
     stages {
@@ -102,9 +101,9 @@ pipeline {
                 }
             }
 
-            /*environment {
+            environment {
                 CI_ENVIRONMENT_URL = 'https://deft-crostata-3e8a54.netlify.app'
-            }*/
+            }
 
             steps {
                 sh '''
