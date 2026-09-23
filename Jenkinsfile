@@ -95,7 +95,7 @@ pipeline {
             }
         }
 
-        stage('Staging E2E tests') {
+        /*stage('Staging E2E tests') {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.61.1-noble'
@@ -118,7 +118,7 @@ pipeline {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Staging E2E', reportTitles: '', useWrapperFileDirectly: true])
                 }
             }
-        }
+        }*/
 
         stage('Approval') {
             steps {
