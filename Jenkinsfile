@@ -106,7 +106,7 @@ pipeline {
         /*stage('Staging E2E tests') {
             agent {
                 docker {
-                    image 'mcr.microsoft.com/playwright:v1.61.1-noble'
+                    image 'my-playwright'
                     reuseNode true
                     //args '-u root:root'
                 }
@@ -149,7 +149,7 @@ pipeline {
         /*stage('Prod E2E tests') {
             agent {
                 docker {
-                    image 'mcr.microsoft.com/playwright:v1.61.1-noble'
+                    image 'my-playwright'
                     reuseNode true
                     //args '-u root:root'
                 }
