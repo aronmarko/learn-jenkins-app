@@ -60,15 +60,14 @@ pipeline {
                 stage('E2E tests') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.61.1-noble'
+                            image 'my-playwright'
                             reuseNode true
                             //args '-u root:root'
                         }
                     }
                     steps {
                         sh '''
-                            npm install serve
-                            node_modules/.bin/serve -s build &
+                            serve -s build &
                             sleep 10
                             npx playwright test --reporter=html
                         '''
